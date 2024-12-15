@@ -1,13 +1,11 @@
-import React from 'react'
+import About from './components/About'
 import Hero from './components/Hero'
 
-
-type Props = {}
-
-const App = (props: Props) => {
+const App = () => {
   return (
     <main className='relative min-h-screen w-screen overflow-x-hidden'>
       <Hero />
+      <About />
     </main>
   )
 }
