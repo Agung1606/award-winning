@@ -44,7 +44,7 @@ const Hero = () => {
         height: '100%',
         duration: 1,
         ease: 'power1.inOut',
-        onStart: () => nextVdRef.current.play(),
+        onStart: () => nextVdRef?.current?.play(),
       });
       gsap.from('#current-video', {
         transformOrigin: 'center center',
@@ -81,6 +81,15 @@ useGSAP(() => {
 
   return (
     <div className='relative h-dvh w-screen overflow-x-hidden'>
+    {loading && (
+      <div className='flex-center absolute z-[100] h-dvh w-screen overflow-hidden bg-violet-50'>
+        <div className='three-body'>
+          <div className='three-body__dot'></div>
+          <div className='three-body__dot'></div>
+          <div className='three-body__dot'></div>
+        </div>
+      </div>
+    )}
       <div 
         id='video-frame' 
         className='relative z-10 h-dvh w-screen overflow-hidden rounded-lg bg-blue-75'
