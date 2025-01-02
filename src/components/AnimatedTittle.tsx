@@ -3,9 +3,14 @@ import clsx from 'clsx';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 
+type Props = {
+  title: string;
+  containerClass?: string;
+}
+
 gsap.registerPlugin(ScrollTrigger)
 
-const AnimatedTittle = ({ title, containerClass }: any) => {
+const AnimatedTittle = ({ title, containerClass }: Props) => {
   const containerRef = useRef(null);
 
   useEffect(() => {
