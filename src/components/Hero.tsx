@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import VideoPreview from './VideoPreview';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
@@ -95,7 +95,7 @@ useGSAP(() => {
         className='relative z-10 h-dvh w-screen overflow-hidden rounded-lg bg-blue-75'
       >
         <div>
-          <div className='mask-clip-path absloute-center absolute z-50 size-64 cursor-pointer overflow-hidden rounded-lg'>
+          <div className='mask-clip-path absolute-center z-50 size-64 cursor-pointer overflow-hidden rounded-lg'>
             <VideoPreview>
               <div 
                 onClick={handleMiniVdClick} 
